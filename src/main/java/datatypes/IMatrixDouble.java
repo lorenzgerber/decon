@@ -1,5 +1,9 @@
-package linalg;
+package datatypes;
 
+/**
+ * @param <E> Matrix for linear algebra
+ *           operations
+ */
 public interface IMatrixDouble<E> {
 
     int numberOfColumns(E matrix );
@@ -25,7 +29,6 @@ public interface IMatrixDouble<E> {
     Double elementSumOfSquares( E matrix );
 
     E setNegativeToZero( E matrix );
-
 
     boolean isNaN( E matrix );
 
