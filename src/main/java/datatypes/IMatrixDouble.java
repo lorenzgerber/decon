@@ -6,34 +6,40 @@ package datatypes;
  */
 public interface IMatrixDouble<E> {
 
-    int numberOfColumns(E matrix );
+    int numberOfColumns( );
 
-    int numberOfRows( E matrix );
+    int numberOfRows( );
 
-    E extractColumn( E matrix, int column );
+    E extractColumn( int column );
 
-    E extractRow( E matrix, int row );
+    E extractRow( int row );
 
-    E insertColumn( E matrix, E column, int columnId );
+    E insertColumn( E column, int columnId );
 
-    E insertRow( E matrix, E row, int rowId );
+    E insertRow( E row, int rowId );
 
-    E transpose( E matrix );
+    E transpose();
 
-    double elementSum( E matrix );
+    double elementSum( );
 
-    E divide( E dividend, E divisor );
+    IMatrixDouble<E> divide( IMatrixDouble<E> divisor );
 
-    E divide( E dividend, double divisor );
+    IMatrixDouble<E> divide( double divisor );
 
-    Double elementSumOfSquares( E matrix );
+    IMatrixDouble<E> multiplication( IMatrixDouble<E> matrix );
 
-    E setNegativeToZero( E matrix );
+    IMatrixBoolean<E> multiplication( double d );
 
-    boolean isNaN( E matrix );
+    Double elementSumOfSquares( );
 
+    IMatrixBoolean<E> elementLessThan( double d );
 
+    IMatrixDouble<E> setNegativeToZero( );
 
+    IMatrixDouble<E> innerProduct(IMatrixDouble<E> matrix );
 
+    IMatrixDouble<E> pseudoInverse( );
 
+    boolean isNaN( );
+    
 }
